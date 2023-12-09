@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITY</title>
+</head>
+
+<body>
+    <script>
+const Calculator = {
+    add: function(x, y) {
+        return x + y;
+    },
+    subtract: function(x, y) {
+        return x - y;
+    },
+    multiply: function(x, y) {
+        return x * y;
+    },
+    divide: function(x, y) {
+        try {
+            if (y === 0) {
+                throw new Error('Division by zero');
+            }
+            return x / y;
+        } catch (error) {
+            return error.message;
+        }
+    }
+};
+
+console.log("Addition:", Calculator.add(5, 9));
+console.log("Subtraction:", Calculator.subtract(10, 6));
+console.log("Multiplication:", Calculator.multiply(6, 9));
+console.log("Division:", Calculator.divide(8, 10));
+console.log("Division:", Calculator.divide(5, 0)); 
+    </script>
+</body>
+</html>
